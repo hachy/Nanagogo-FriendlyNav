@@ -1,0 +1,17 @@
+.left-contents {
+  background: #f4f3f0;
+  border-right: 1px solid #e5e4e0;
+  height: 100%;
+  overflow: visible;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 150px;
+  z-index: 100;
+}
+
+.main-contents {
+  margin-left: 150px;
+  width: 100%;
+  z-index: 90;
+}
