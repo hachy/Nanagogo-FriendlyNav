@@ -1,17 +1,40 @@
 .left-contents {
   background: #f4f3f0;
   border-right: 1px solid #e5e4e0;
+  color: #000;
+  font-size: 12px;
   height: 100%;
-  overflow: visible;
+  overflow: auto;
   position: fixed;
   top: 0;
   left: 0;
-  width: 150px;
+  width: 100px;
   z-index: 100;
 }
 
-.main-contents {
-  margin-left: 150px;
-  width: 100%;
-  z-index: 90;
+.title-nogizaka {
+  background: #812990;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 7px 0 7px 10px;
+}
+
+.nogi-list {
+  list-style: none;
+  height: 100%;
+}
+
+.nogi-list li:nth-child(odd) {
+  background: #eae9e8;
+}
+
+.nogi-list li a {
+  display: block;
+  padding: 7px 0 7px 15px;
+  text-decoration: none;
+}
+
+.nogi-list li a:hover {
+  background: #bc8dc4;
 }
