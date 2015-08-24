@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Nanagogo Friendly Nav(Nogizaka46)",
   "description": "Nogizaka46 friendly navigation in 755(7gogo)",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "permissions": [
     "http://7gogo.jp/*"
   ],
