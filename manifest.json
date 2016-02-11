@@ -2,14 +2,14 @@
   "manifest_version": 2,
   "name": "Nanagogo Friendly Nav(Nogizaka46)",
   "description": "Nogizaka46 friendly navigation in 755(7gogo)",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "permissions": [
-    "http://7gogo.jp/*"
+    "https://7gogo.jp/*"
   ],
   "content_scripts": [
     {
       "all_frames": true,
-      "matches": ["http://7gogo.jp/*"],
+      "matches": ["https://7gogo.jp/*"],
       "js": ["jquery.js", "myscript.js"],
       "css": ["mystyle.css"]
     }
