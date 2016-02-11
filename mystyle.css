@@ -30,6 +30,7 @@
 }
 
 .nogi-list li a {
+  color: #000;
   display: block;
   padding: 7px 0 7px 15px;
   text-decoration: none;
