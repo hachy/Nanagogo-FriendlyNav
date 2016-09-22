@@ -1,7 +1,7 @@
+/* eslint-env jquery */
 /* eslint quote-props: [2, "consistent"] */
-'use strict';
 
-var nogizaka = {
+const nogizaka = {
   '秋元真夏'   : 'https://7gogo.jp/akimoto-manatsu',
   '生田絵梨花' : 'https://7gogo.jp/ikuta-erika',
   '伊藤かりん' : 'https://7gogo.jp/itou-karin',
@@ -27,20 +27,20 @@ var nogizaka = {
   '松村沙友理' : 'https://7gogo.jp/matsumura-sayuri',
   '山崎怜奈'   : 'https://7gogo.jp/yamazaki-rena',
   '渡辺みり愛' : 'https://7gogo.jp/watanabe-miria',
-  '和田まあや' : 'https://7gogo.jp/wada-maaya'
+  '和田まあや' : 'https://7gogo.jp/wada-maaya',
 };
 
-$(function() {
-  var nav = $('<div class="left-contents"><p class="title-nogizaka">乃木坂46</p><ul class="nogi-list"></ul></div>');
-  var main = $('body').children();
+$(() => {
+  const nav = $('<div class="left-contents"><p class="title-nogizaka">乃木坂46</p><ul class="nogi-list"></ul></div>');
+  const main = $('body').children();
 
   main.css('margin-left', '100px');
   $('.l-header').css('margin-left', '100px');
   $('body').append(nav);
 
-  $.each(nogizaka, function(name, url) {
+  $.each(nogizaka, (name, url) => {
     $('<li></li>')
-      .append('<a href="' + url + '" target="_parent">' + name + '</a>')
+      .append(`<a href="${url}" target="_parent">${name}</a>`)
       .appendTo('.nogi-list');
   });
 });
