@@ -10,7 +10,7 @@
     {
       "all_frames": true,
       "matches": ["https://7gogo.jp/*"],
-      "js": ["jquery.js", "myscript.js"],
+      "js": ["myscript.js"],
       "css": ["mystyle.css"]
     }
   ]
