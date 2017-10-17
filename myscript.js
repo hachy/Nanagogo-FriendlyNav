@@ -1,6 +1,3 @@
-/* eslint-env jquery */
-/* eslint quote-props: [2, "consistent"] */
-
 const nogizaka = {
   '秋元真夏'   : 'https://7gogo.jp/akimoto-manatsu',
   '生田絵梨花' : 'https://7gogo.jp/ikuta-erika',
@@ -32,17 +29,32 @@ const nogizaka = {
   '和田まあや' : 'https://7gogo.jp/wada-maaya',
 };
 
-$(() => {
-  const nav = $('<div class="left-contents"><p class="title-nogizaka">乃木坂46</p><ul class="nogi-list"></ul></div>');
-  const main = $('body').children();
+const fragment = document.createDocumentFragment()
+const div= document.createElement('div')
+const p = document.createElement('p')
+const ul = document.createElement('ul')
+const title = document.createTextNode('乃木坂46')
 
-  main.css('margin-left', '100px');
-  $('.l-header').css('margin-left', '100px');
-  $('body').append(nav);
+div.classList.add('left-contents')
+p.classList.add('title-nogizaka')
+ul.classList.add('nogi-list')
 
-  $.each(nogizaka, (name, url) => {
-    $('<li></li>')
-      .append(`<a href="${url}" target="_parent">${name}</a>`)
-      .appendTo('.nogi-list');
-  });
-});
+div.appendChild(p)
+p.appendChild(title)
+div.appendChild(ul)
+
+document.body.firstChild.style.marginLeft = '100px'
+document.body.appendChild(div)
+
+Object.keys(nogizaka).forEach(function(key) {
+  const li = document.createElement('li')
+  const a = document.createElement('a')
+  const name = document.createTextNode(key)
+  a.href = nogizaka[key]
+  a.target = '_parent'
+  a.appendChild(name)
+  li.appendChild(a)
+  fragment.appendChild(li)
+})
+
+ul.appendChild(fragment)
