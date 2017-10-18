@@ -1,0 +1,15 @@
+{
+  "env": {
+    "browser": true
+  },
+  "extends": "airbnb-base",
+  "rules": {
+    "quote-props": [2, "consistent"],
+    "key-spacing": [2, {
+      "mode": "minimum",
+      "align": "colon",
+      "beforeColon": true,
+      "afterColon": true
+    }]
+  }
+}
