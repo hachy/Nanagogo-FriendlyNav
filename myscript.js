@@ -30,7 +30,7 @@ const nogizaka = {
 };
 
 const fragment = document.createDocumentFragment()
-const div= document.createElement('div')
+const div = document.createElement('div')
 const p = document.createElement('p')
 const ul = document.createElement('ul')
 const title = document.createTextNode('乃木坂46')
@@ -43,7 +43,7 @@ div.appendChild(p)
 p.appendChild(title)
 div.appendChild(ul)
 
-document.body.firstChild.style.marginLeft = '100px'
+document.documentElement.style.marginLeft = '100px'
 document.body.appendChild(div)
 
 Object.keys(nogizaka).forEach(function(key) {
